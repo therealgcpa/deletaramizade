@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card-aviso" id="aviso">
+      <h1>⚠️CLIQUE EM QUALQUER LUGAR⚠️</h1>
+    </div>
+
+    <audio id="audio" loop>
+      <source src="./novinhaexperiente.mp3" type="audio/mp3" />
+    </audio>
+
+    <div class="card-video" id="cardVideo">
+      <video id="video" muted>
+        <source src="./voutedeletar.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="card-apagar" id="apagar">
+      <h1>Deletar você da minha vida?</h1>
+      <form>
+        <label> <input type="radio" name="resposta" value="sim" /> Sim </label>
+        <label> <input type="radio" name="resposta" value="nao" /> Não </label>
+      </form>
+
+      <div class="card-senha">
+        <h1>SENHA</h1>
+
+        <form>
+          <input type="password" name="" id="senha" maxlength="5" />
+          <button type="button" id="btn-excluir">OK</button>
+        </form>
+      </div>
+
+      <div class="gif-stop" id="gif">
+        <img src="./shino.gif" alt="" />
+      </div>
+
+      <div class="card-aviso erro" id="aviso">
+        <h1>⚠️ERRO⚠️</h1>
+        <p>
+          Impossivel deletar a AMIZADE e o CARINHO <br />
+          Que sinto por você. arquivo muito grande no <br />
+          meu coração. Beijokas carinhosas no seu <br />
+          coração, e saiba que te ADORO demais.
+        </p>
+      </div>
+    </div>
+
+    <div class="container" id="container-carregamento">
+      <div class="titulo">Aguarde, Deletando...</div>
+      <div class="barra" id="barra">
+        <!-- 20 barrinhas -->
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+        <div class="bloco"></div>
+      </div>
+      <div class="progresso" id="progresso">0%</div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

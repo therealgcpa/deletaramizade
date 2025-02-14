@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-aviso {
+  background-color: red;
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  font-weight: bolder;
+  font-size: larger;
+  top: 5rem;
+  animation: glitchColor 0.8s infinite alternate,
+    glitchMove 0.15s infinite alternate;
+}
+
+@keyframes glitchColor {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #00ff00;
+  }
+}
+
+@keyframes glitchMove {
+  0% {
+    transform: translate(1px, 1px) rotate(0.5deg);
+  }
+  25% {
+    transform: translate(-1px, -2px) rotate(-0.5deg);
+  }
+  50% {
+    transform: translate(-3px, 0px) rotate(0.5deg);
+  }
+  75% {
+    transform: translate(3px, 2px) rotate(-0.5deg);
+  }
+  100% {
+    transform: translate(1px, -1px) rotate(0deg);
+  }
+}
+
+.card-video {
+  width: 300px;
+  height: 300px;
+  display: flex;
+}
+
+.card-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-apagar {
+  width: 500px;
+  height: auto;
+  display: none;
+  gap: 1rem;
+  flex-direction: column;
+  background-color: #e1dde1;
+  border: 5px solid #000000;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.card-apagar h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* Estilo inicial do botão de rádio */
+input[type='radio'] {
+  width: 20px;
+  height: 20px;
+  appearance: none; /* Remove a aparência padrão do rádio */
+  border: 2px solid #333;
+  border-radius: 50%; /* Faz o círculo */
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Bolinha interna do radio */
+input[type='radio']::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent; /* A bolinha começa transparente */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Quando o rádio é selecionado */
+input[type='radio']:checked {
+  border-color: red; /* Cor da borda quando selecionado */
+}
+
+/* Quando o rádio é selecionado, a bolinha interna fica vermelha */
+input[type='radio']:checked::after {
+  background-color: red; /* Bolinha interna vermelha quando selecionado */
+}
+
+.card-senha {
+  background-color: #aba8be;
+  align-self: center;
+  padding: 0.5rem 1.5rem;
+  border: 3px solid #9a959f;
+  border-radius: 0.5rem;
+}
+
+.card-senha input {
+  outline: none;
+  font-size: 50px;
+  width: 6.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #9a959f;
+  text-align: center;
+}
+
+.card-senha button {
+  outline: none;
+  font-size: 26px;
+  background-color: #928d95;
+  border: 2px solid #ffffff;
+  border-radius: 0.5rem;
+  padding: 0 0.7rem;
+  text-align: center;
+  font-family: serif;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.card-senha button:active {
+  background-color: #282529;
+  color: #ffffff;
+}
+
+/* AVISO */
+
+.container {
+  background: #999;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  width: auto;
+  border: 3px solid #fff;
+  position: absolute;
+  display: none;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 1.9rem;
+  margin-bottom: 10px;
+}
+
+.barra {
+  display: flex;
+  gap: 2px;
+  background: #eee;
+  padding: 5px;
+  justify-content: start;
+  border-radius: 0.2rem;
+}
+
+.bloco {
+  width: 10px;
+  height: 30px;
+  background: transparent;
+  /* border: 1px solid #000; */
+}
+
+.progresso {
+  margin-top: 10px;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+/* AVISO */
+
+.gif-stop {
+  display: none;
+  position: absolute;
+  width: 8rem;
+  bottom: 0;
+  right: 11.2rem;
+  z-index: 9999;
+}
+
+.gif-stop img {
+  width: 100%;
+  height: 100%;
+}
+
+.erro {
+  width: auto;
+  height: 12rem;
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 10rem;
+  left: 2.5rem;
+  animation: glitchColor 0.8s infinite alternate;
+  z-index: 9999;
+}
+
+.erro p {
+  color: #ffffff;
+}
